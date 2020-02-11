@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cocktail.AsyncPack</name>
+    </assembly>
+    <members>
+        <member name="T:Cocktail.AwaiterFns">
+            <summary>
+            A collection of extension methods to get awaiters for Cocktail and DevForce asynchronous operations.
+            </summary>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter(Cocktail.IAwaitable)">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter``1(Cocktail.IAwaitable{``0})">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter(IdeaBlade.EntityModel.CoroutineOperation)">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter(IdeaBlade.EntityModel.EntityQueryOperation)">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter``1(IdeaBlade.EntityModel.EntityQueryOperation{``0})">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter(IdeaBlade.EntityModel.EntityRefetchOperation)">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter(IdeaBlade.EntityModel.EntitySaveOperation)">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter(IdeaBlade.EntityModel.EntityScalarQueryOperation)">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter``1(IdeaBlade.EntityModel.EntityScalarQueryOperation{``0})">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter(IdeaBlade.EntityModel.InvokeServerMethodOperation)">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="M:Cocktail.AwaiterFns.GetAwaiter(IdeaBlade.EntityModel.LoginOperation)">
+            <summary>
+            Gets an awaiter used to await this operation.
+            </summary>
+            <param name="operation">The operation to await.</param>
+        </member>
+        <member name="T:Cocktail.TaskFns">
+            <summary>
+            A collection of <see cref="T:System.Threading.Tasks.Task"/> and <see cref="T:System.Threading.Tasks.Task`1"/> extension methods.
+            </summary>
+        </member>
+        <member name="M:Cocktail.TaskFns.AsOperationResult(System.Threading.Tasks.Task)">
+            <summary>
+              Returns an implementation of <see cref="T:Cocktail.OperationResult"/> that wraps <see cref="T:System.Threading.Tasks.Task"/> .
+            </summary>
+            <param name="task"> The task to be wrapped. </param>
+            <returns> OperationResult encapsulating the provided <see cref="T:System.Threading.Tasks.Task"/> . </returns>
+        </member>
+        <member name="M:Cocktail.TaskFns.AsOperationResult``1(System.Threading.Tasks.Task{``0})">
+            <summary>
+              Returns an implementation of <see cref="T:Cocktail.OperationResult"/> that wraps <see cref="T:System.Threading.Tasks.Task`1"/> .
+            </summary>
+            <param name="task"> The task to be wrapped. </param>
+            <returns> OperationResult encapsulating the provided <see cref="T:System.Threading.Tasks.Task`1"/> . </returns>
+        </member>
+        <member name="M:Cocktail.TaskFns.OnComplete(System.Threading.Tasks.Task,System.Action,System.Action{System.Exception})">
+            <summary>Extension method to process the result of an asynchronous query operation.</summary>
+            <param name="task">The task representing the asynchronous operation.</param>
+            <param name="onSuccess">A callback to be called if the task completed was successful.</param>
+            <param name="onFail">A callback to be called if the task failed.</param>
+            <returns>OperationResult encapsulating the provided <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:Cocktail.TaskFns.OnComplete``1(System.Threading.Tasks.Task{``0},System.Action{``0},System.Action{System.Exception})">
+            <summary>Extension method to process the result of an asynchronous query operation.</summary>
+            <param name="task">The task representing the asynchronous operation.</param>
+            <param name="onSuccess">A callback to be called if the task completed was successful.</param>
+            <param name="onFail">A callback to be called if the task failed.</param>
+            <returns>OperationResult encapsulating the provided <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:Cocktail.TaskFns.HandleError(System.Threading.Tasks.Task,System.Action{System.Exception})">
+            <summary>
+            Schedules an error handler to be called if the current task fails.
+            </summary>
+            <param name="task">Current task.</param>
+            <param name="errorHandler">Action to be called if current tasks fails.</param>
+        </member>
+    </members>
+</doc>
